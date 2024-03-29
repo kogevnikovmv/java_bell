@@ -25,6 +25,3 @@ public class thirdSolution {
         }
     }
 }
-
-// 3.3 4.3    xy
-// 3.4 4.4
