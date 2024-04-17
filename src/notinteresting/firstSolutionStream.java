@@ -1,3 +1,5 @@
+package notinteresting;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -34,34 +36,20 @@ public class firstSolutionStream {
         }});
 
         System.out.println("Решение №1");
-        //for(Map<String, String> ppl: ppls) {
-        //    if (Integer.parseInt(ppl.get("возраст"))<30) {
-        //        System.out.println(ppl.get("имя"));
-        //    }
-        //}
         ppls.stream()
                 .filter(x->Integer.parseInt(x.get("возраст"))<30)
                 .forEach(x->System.out.println(x.get("имя")));
 
         System.out.println("Решение №2");
-        //for(Map<String, String> ppl: ppls) {
-        //    if (ppl.get("зарплата").contains("руб")) {
-        //        System.out.println(ppl.get("имя"));
-        //    }
-        //}
         ppls.stream()
                 .filter(x->x.get("зарплата").contains("руб"))
                 .forEach(x->System.out.println(x.get("имя")));
 
         System.out.println("Решение №3");
-        //for(Map<String, String> ppl: ppls) {
-        //    ageSum +=Integer.parseInt(ppl.get("возраст"));
-        //}
-        //System.out.println(ageSum/ppls.size());
         int age=ppls.stream()
                 .map(x-> Integer.parseInt(x.get("возраст")))
                 .reduce((x,y)->x+y).get();
-        System.out.println((double)(age/ppls.size()));
+        System.out.println((age/ppls.size()));
 
 
 
